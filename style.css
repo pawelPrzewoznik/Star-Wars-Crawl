@@ -43,7 +43,7 @@ body{
 .crawl{
   visibility: hidden;
   position: relative;
-  top: -100px;
+  top: 0px;
   transform-origin: 50% 100%;
   animation: crawl 60s linear infinite;
   animation-delay: 17s;
@@ -52,7 +52,7 @@ body{
 @keyframes crawl {
 
     0%{
-      top:-100px;
+      top:0px;
       visibility: visible;
       transform:rotateX(20deg) translateZ(0);
     }
