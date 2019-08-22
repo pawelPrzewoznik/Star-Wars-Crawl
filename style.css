@@ -1,0 +1,108 @@
+body{
+  width: 100%;
+  background-image: url("stars.jpg");
+  background-size: 100%;
+  overflow: hidden;
+}
+
+#intro{
+  margin-top: 400px;
+    visibility: hidden;
+    position: fixed;
+    justify-content: center;
+
+  color:lightblue;
+  animation-name: intro;
+  animation-duration: 6s;
+}
+
+.star-wars{
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  perspective: 200px;
+  color: orange;
+  font-family: cursive;
+  font-size: 250%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+.crawl{
+  visibility: hidden;
+  position: relative;
+  top: -100px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear infinite;
+  animation-delay: 17s;
+}
+
+@keyframes crawl {
+
+    0%{
+      top:-100px;
+      visibility: visible;
+      transform:rotateX(20deg) translateZ(0);
+    }
+    100%{
+      top:-6000px;
+      visibility: visible;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+}
+
+.fade{
+  position:relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
+@keyframes intro {
+  0%{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+}
+
+#beCode{
+  visibility: hidden;
+  position: fixed;
+  margin-top: 10%;
+  animation-name: crawl2;
+  animation-delay: 7s;
+  animation-duration: 10s;
+}
+
+@keyframes crawl2 {
+    0%{
+
+      visibility: visible;
+      transform: scale3d(2,2,2);
+    }
+    100%{
+
+      visibility: visible;
+      transform: scale3d(0,0,0);
+    }
+}
